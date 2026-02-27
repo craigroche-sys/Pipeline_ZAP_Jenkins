@@ -11,7 +11,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 script {
-                    bat '"C:\\Program Files\\Apachi\\Maven\\apache-maven-3.9.12\\bin\\mvn.cmd" verify -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=9091 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=9091' // Proxy tests through ZAP
+                    bat '"C:\\Program Files\\Apachi\\Maven\\apache-maven-3.9.12\\apache-maven\\src\\bin\\mvn.cmd" verify -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=9091 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=9091' // Proxy tests through ZAP
                 }
             }
         }
@@ -24,6 +24,7 @@ pipeline {
         }
     }
 }
+
 
 
 
