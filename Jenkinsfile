@@ -4,6 +4,11 @@ pipeline {
         maven "Maven_3.9.12"
     }
     stages { 
+        stage('Checkout'){
+            steps{
+                checkout scm
+            }
+        }
         stage('Setup') {
             steps {
                 script {
@@ -27,6 +32,7 @@ pipeline {
         }
     }
 }
+
 
 
 
