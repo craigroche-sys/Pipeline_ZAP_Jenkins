@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools{
         maven "Maven_3.9.12"
-        ZAP "ZAP_2.17.0"
     }
     stages { 
         stage('Setup') {
@@ -28,6 +27,7 @@ pipeline {
         }
     }
 }
+
 
 
 
